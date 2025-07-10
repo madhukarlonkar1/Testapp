@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TCM_FLASHING</RootNamespace>
+    <TargetFramework>net48</TargetFramework>
+    <AssemblyName>TCM_FLASHING</AssemblyName>
+    <StartupObject>TCM_FLASHING.Program</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Windows.Forms" />
+    <!-- Add other dependencies here -->
+  </ItemGroup>
+</Project>
