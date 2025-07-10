@@ -1,0 +1,890 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Reprogramming_Dll
+</name>
+</assembly>
+<members>
+<member name="T:Reprogramming_Dll.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:Reprogramming_Dll.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:Reprogramming_Dll.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:Reprogramming_Dll.ECUCommands.CommunicationInterface">
+ <summary>
+ Gets and sets the communication interface for reprogramming.
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUCommands.Cmd_StartRoutine(System.Byte,System.Int64@,System.Int64@)">
+ <summary>
+ Prepares command to start the given routine.
+ </summary>
+ <param name="byvRoutineID"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUCommands.Cmd_EcuReset">
+ <summary>
+ Prepares command to start the given routine.
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUCommands.Cmd_DownloadRequest(System.Int64,System.Int64)">
+ <summary>
+ Prepares command for download request.
+ </summary>
+ <param name="nvMemAdd">Memory address</param>
+ <param name="byvSerialMode">This value should be zero</param>
+ <param name="nvvMemSize">Memory size</param>
+ <returns>Command byte array</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUCommands.Cmd_TransferData(System.Byte[]@,System.Byte)">
+ <summary>
+ Prepares the command to transfer the data like [Command] = 36 d1 d2 d3 ..........dn
+ </summary>
+ <param name="byrData"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUCommands.Cmd_TransferExit">
+ <summary>
+ Prepares the command to exit from transfer operation.
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUCommands.Cmd_WriteCodeFingerprint(System.Byte[])">
+ <summary>
+ Prepares command to write code fingerprint.
+ </summary>
+ <param name="objCodeFingerprint"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUCommands.Cmd_WriteDataFingerprint(System.Byte[]@)">
+ <summary>
+ Prepares command to write data fingerprint data.
+ </summary>
+ <param name="objDataFingerprint"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUCommands.Cmd_WriteBootFingerprint(System.Byte[]@)">
+ <summary>
+ Prepares command to write boot finger print data.
+ </summary>
+ <param name="objBootFingerprint"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUResponses.Res_ReadFlashLoderInformation(System.Byte[]@,System.Int64@)">
+ <summary>
+ Extracts the code fingerprint data from received response.
+ </summary>
+ <param name="InBuff"></param>
+ <param name="objCodeFingerprint"></param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUResponses.Res_ReadDataFingerprint(System.Byte[]@,System.Int64@)">
+ <summary>
+ Extracts the data fingerprint data from response received.
+ </summary>
+ <param name="InBuff"></param>
+ <param name="objDataFingerprint"></param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUResponses.Res_ReadBootFingerprint(System.Byte[]@,System.Int64@)">
+ <summary>
+ Extracts boot fingerprint data from the response received.
+ </summary>
+ <param name="InBuff"></param>
+ <param name="objBootFingerprint"></param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUResponses.Res_ReadLogZoneFingerPrint(System.Byte[]@,System.Int64@)">
+ <summary>
+ Extracts Log Zone data  from the response received.
+ </summary>
+ <param name="InBuff"></param>
+ <param name="objLogFingerprint"></param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUResponses.Res_SecurityAccess1(System.Byte[]@,System.Byte[]@,System.Int64@)">
+ <summary>
+ Verifies response for security access1 and returns seed.
+ </summary>
+ <param name="InBuff"></param>
+ <param name="lrSeed"></param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUResponses.Res_SecurityAccess2(System.Byte[]@,System.Int64@)">
+ <summary>
+ Verifies that ECU is unlocked successfully or not.
+ </summary>
+ <param name="InBuff"></param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUResponses.Res_StartDiagnosticSession(System.Byte[]@,System.Int64@)">
+ <summary>
+ Verifies the reponse recieved for Start diagnsotic session.
+ </summary>
+ <param name="InBuff"></param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUResponses.Res_StopDiagnosticSession(System.Byte[]@,System.Int64@)">
+ <summary>
+ Verifies the response of stop diangostic session.
+ </summary>
+ <param name="InBuff"></param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUResponses.Res_StartRoutine(System.Byte[]@,System.Int64@)">
+ <summary>
+ Verifies the response of start routine.
+ </summary>
+ <param name="InBuff"></param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUResponses.Res_DownloadRequest(System.Byte[]@,System.Int16@,System.Int64@)">
+ <summary>
+ Verifies the response for command download request.
+ </summary>
+ <param name="InBuff">Response Buffer</param>
+ <param name="shrMaxMsgSize">Maximum message size in transfer data is retuned</param>
+ <param name="lrErrorCode">Retuns error code if any</param>
+ <returns>True - If response is positive and error free</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUResponses.Res_EcuReset(System.Byte[]@,System.Int64@)">
+ <summary>
+ Verifies the response for command download request.
+ </summary>
+ <param name="InBuff">Response Buffer</param>
+ <param name="lrErrorCode">Retuns error code if any</param>
+ <returns>True - If response is positive and error free</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUResponses.Res_TransferData(System.Byte[]@,System.Int64@)">
+ <summary>
+ Verifies the response for command transfer data.
+ </summary>
+ <param name="InBuff">Response Buffer</param>
+ <param name="lrErrorCode">Retuns error code if any</param>
+ <returns>True - If response is positive and error free</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUResponses.Res_TransferExit(System.Byte[]@,System.Int64@)">
+ <summary>
+ Verifies the response for command transfer exit.
+ </summary>
+ <param name="InBuff">Response Buffer</param>
+ <param name="lrErrorCode">Retuns error code if any</param>
+ <returns>True - If response is positive and error free</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUResponses.Res_WriteCodeFingerprint(System.Byte[]@,System.Int64@)">
+ <summary>
+ Verifies the response for command writing log zone.
+ </summary>
+ <param name="InBuff">Response Buffer</param>
+ <param name="lrErrorCode">Retuns error code if any</param>
+ <returns>True - If response is positive and error free</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUResponses.IsResponseValid(System.Byte[]@,System.Byte,System.Int64@)">
+ <summary>
+ Verifies that response is positive and valid.
+ </summary>
+ <param name="byrInBuff"></param>
+ <param name="byvRespSID"></param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUFunctions.ECUTesterPresent(System.Int64@)">
+ <summary>
+ Sends tester present command to ECU
+ </summary>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUFunctions.ECUAccessTimingParams(System.Int64@)">
+ <summary>
+ Sets optimum timing parameters to ECU
+ </summary>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUFunctions.ECUReadFlashFingerprint(System.Int64@)">
+ <summary>
+ Reads ECU code fingerprint data.
+ </summary>
+ <param name="objCodeFingerprint"></param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUFunctions.ECUReadLogFingerPrint(System.Int64@)">
+ <summary>
+ Reads ECU Log Zone fingerprint data.
+ </summary>
+ <param name="objCodeFingerprint"></param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUFunctions.ECUReadDataFingerprint(System.Int64@)">
+ <summary>
+ Reads ECU data fingerprint data.
+ </summary>
+ <param name="objdataFingerprint"></param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUFunctions.ReadEcuData(System.Byte[],System.String@,System.Int64@)">
+ <summary>
+ Reads ECU boot fingerprint data.
+ </summary>
+ <param name="objbootFingerprint"></param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUFunctions.ECUStartSession(System.Byte,System.Int64@)">
+ <summary>
+ The purpose of this function is start a new diagnostic session with new or same baud rate.
+ </summary>
+ <param name="bylBaud"></param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUFunctions.ECUStartDefaultSession(System.Byte,System.Int64@)">
+ <summary>
+ The purpose of this function is start a new default diagnostic session with new or same baud rate.
+ </summary>
+ <param name="bylBaud"></param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUFunctions.ECUStopSession(System.Int64@)">
+ <summary>
+ Stops the presently selected diagnostic session in ECU.
+ </summary>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUFunctions.ECUReadSeed(System.Byte[]@,System.Int64@)">
+ <summary>
+ Reads seed value from the ECU
+ </summary>
+ <param name="lrSeed"></param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUFunctions.ECUSendKey(System.Byte[],System.Int64@)">
+ <summary>
+ Sends calculated seed-key to ECU to unlock it.
+ </summary>
+ <param name="lvKey"></param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUFunctions.ECUEraseFlash(System.Int64@,System.Int64@,System.Int64@)">
+ <summary>
+ Erases the flash. It sends the command to erase flash and wait for positive 
+ response.
+ </summary>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUFunctions.ECURequestDownload(System.Int64,System.Int64,System.Int16@,System.Int64@,System.Int16@)">
+ <summary>
+ Sends download request command and verifies its response.
+ </summary>
+ <param name="nvMemAdd">Starting address of the data</param>
+ <param name="byvSerialMode">Serial mode byte</param>
+ <param name="nvvMemSize">Total number of bytes to download</param>
+ <param name="shrMaxMsgSize">Maximum message size</param>
+ <param name="lrErrorCode">Error Code</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUFunctions.ECUWriteCodeFingerprint(System.Int64@)">
+ <summary>
+ Writes given code fingerprint data into ECU
+ </summary>
+ <param name="objCodeFingerprint"></param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUFunctions.ECUWriteDataFingerprint(System.Int64@)">
+ <summary>
+ Writes given data fingerprint data into ECU
+ </summary>
+ <param name="objDataFingerprint"></param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ECUFunctions.ECUWriteBootFingerprint(System.Int64@)">
+ <summary>
+ Writes given boot fingerprint data into ECU
+ </summary>
+ <param name="objBootFingerprint"></param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.Reprogrammer.RFLInit(System.String,System.Int64@)">
+ <summary>
+ This function has to be called before actually reflashing the ECU. This function 
+ initializes the objects that required for re-flashing.
+ </summary>
+ <param name="strvReFlashBaud"></param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.Reprogrammer.RFLReadReproFiles(System.String,System.Int64@)">
+ <summary>
+ This function is to check existence of IBP files and validating all files by reading.
+ </summary>
+ <param name="strvFileOrDirName"></param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.Reprogrammer.RFLReadFlashFingerprints(System.Int64@)">
+ <summary>
+ Read code fingerprint data. 
+ </summary>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.Reprogrammer.RFLReadDataFingerprints(System.Int64@)">
+ <summary>
+ Read data fingerprint data.
+ </summary>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.Reprogrammer.RFLReadECUData(System.Int64@)">
+ <summary>
+ Read boot fingerprint data.
+ </summary>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.Reprogrammer.RFLStartProgrammingSession(System.Int64@)">
+ <summary>f
+ This function starts the new programming diagnostic session.
+ </summary>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.Reprogrammer.RFLStartDefaultSession(System.Int64@)">
+ <summary>
+ This function starts the new Default diagnostic session.
+ </summary>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.Reprogrammer.RFLTesterPresent(System.Int64@)">
+ <summary>
+ Sends tester present
+ </summary>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.Reprogrammer.RFLAccessTimingParams(System.Int64@)">
+ <summary>
+ Modifies the timing parameters to optimum value.
+ </summary>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.Reprogrammer.RFLStopProgrammingSession(System.Int64@)">
+ <summary>
+ This function stops the programming diagnostic session.
+ </summary>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.Reprogrammer.RFLUnlockTCU(System.Int64@,System.Int32)">
+ <summary>
+ Unlocks the ECU for reprogramming.
+ </summary>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.Reprogrammer.RFLWriteFingerprint(System.String,System.String,System.Int64@)">
+ <summary>
+ Writes ECU fingerprint data.
+ </summary>
+ <param name="strvDownloadingDate"></param>
+ <param name="strvToolSignature"></param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.Reprogrammer.RFLWriteProgramingDate(System.String,System.Int64@)">
+ <summary>
+ Writes Programing Date
+ </summary>
+ <param name="strDownloadingDate"></param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.Reprogrammer.RFLWriteProgramingShopCode(System.String,System.Int64@)">
+ <summary>
+ Writes programing Shop Code
+ </summary>
+ <param name="strShopCode"></param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.Reprogrammer.RFLWriteDataFingerprint(System.String,System.String,System.Int64@)">
+ <summary>
+ Writes data fingerprint data.
+ </summary>
+ <param name="strvDownloadingDate"></param>
+ <param name="strvToolSignature"></param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+ 
+</member>
+<member name="M:Reprogramming_Dll.Reprogrammer.RFLEraseFlash(System.Int64@,System.Int64@,System.Int64@)">
+ <summary>
+ Erases the flash of ECU
+ </summary>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.Reprogrammer.RFLSelfCheck(System.Int64@,System.Int64)">
+ <summary>
+ Self check test is conducted in ECU
+ </summary>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.Reprogrammer.RFLBeginCommunication(System.Boolean,System.Int64@)">
+ <summary>
+ Initialise the communication with ECU
+ </summary>
+ <param name="blnBegin"></param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.Reprogrammer.RFLEndCommunication(System.Boolean,System.Int64@)">
+ <summary>
+ Ends the communication with ECU.
+ </summary>
+ <param name="blnEnd"></param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.Reprogrammer.RFLDelay(System.Int32,System.Int64@)">
+ <summary>
+ Provides delay that specified in milliseconds. But it returns immediately if user aborts.
+ </summary>
+ <param name="llDelay"></param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.Reprogrammer.TransferData(System.Byte[]@,System.Int64,System.Byte,System.Int64@)">
+ <summary>
+ Sends the request to ECU that accept the download command and prepare for transfer data.
+ </summary>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.Reprogrammer.TransferDataInPacket(System.Int16,System.Byte[]@,System.Byte,System.Int64@)">
+ <summary>
+ Transfers the data in packets. It is possible that input buffer is having more length than the maximum allowed in transfer
+ data command. In this case the input buffer is devided into maximum size and sent one by one.
+ </summary>
+ <param name="shvMaxMsgSize">Max Size</param>
+ <param name="byrData">Data to be transferred</param>
+ <param name="lrErrorCode">Error code</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.Reprogrammer.TransferDataInPacketEx(System.Byte[]@,System.Byte,System.Int64@)">
+ <summary>
+ Transfers the data to ECU. But it sends all data from input buffer in signle command.
+ </summary>
+ <param name="byrData"></param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.Reprogrammer.TransferExit(System.Int64@)">
+ <summary>
+ Tells the ECU to exit from Transfer.
+ </summary>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.Reprogrammer.BytesToUInt32(System.Byte,System.Byte,System.Byte,System.Byte)">
+ <summary>
+ Converts four bytes into 32 bit unsingned integer value.
+ </summary>
+ <param name="byvMsb">Most significant byte</param>
+ <param name="byvByte3">Significant byte</param>
+ <param name="byvByte2">Less significan byte</param>
+ <param name="byvLsb">Least significant byte</param>
+ <returns>32 bit unsingned integer value</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ReprogrammerEx.ReadECUInformation(System.Int64,System.Int64,Reprogramming_Dll.DLLConstants.CommInterface,System.String,System.Int64@)">
+ <summary>
+ Reads the ECU identifications and other information.
+ </summary>
+ <param name="lvECUAdd"></param>
+ <param name="lvTesterAdd "></param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ReprogrammerEx.ReadVariantInformation(System.Int64,System.Int64,Reprogramming_Dll.DLLConstants.CommInterface,System.Int64@)">
+ <summary>
+ Reads the ECU Variant Data Information.
+ </summary>
+ <param name="lvECUAdd"></param>
+ <param name="lvTesterAdd "></param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ReprogrammerEx.InitReflashing(System.String,System.Int64,System.Int64,System.String,System.String,System.String,System.String,Reprogramming_Dll.DLLConstants.CommInterface,System.Int64@,System.String)">
+ <summary>
+ Verifies the reprogramming file names and initialises the converter and ECU.
+ </summary>
+ <param name="strvFileName"></param>
+ <param name="lvECUAdd"></param>
+ <param name="lvTesterAdd"></param>
+ <param name="strvNewBaud"></param>
+ <param name="strvToolSign"></param>
+ <param name="strvProgDate"></param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ReprogrammerEx.StartReflashing(System.Int64@,System.Int32)">
+ <summary>
+ Start reprogramming operation.
+ </summary>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ReprogrammerEx._InitReflashing(System.Int64@)">
+ <summary>
+ Initialise the 
+ </summary>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ReprogrammerEx._StartReflashing(System.Int64@,System.Int32)">
+ <summary>
+ Starts the actual reprogramming operation.
+ </summary>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ReprogrammerSamDiaX.SetDeviceNumber">
+ <summary>
+ Subroutine finds the device number from given Serial Number. 
+ But serial number is not set diagno comm uses the SamDiaX device property. 
+ But if serial number is set and corresponding device is found then 
+ SamDiaX device property will be modified according to result.
+ </summary>
+</member>
+<member name="M:Reprogramming_Dll.ReprogrammerSamDiaX.SetNewDeviceNumber">
+ <summary>
+ Call this if device with previous serial number is not present.
+ </summary>
+</member>
+<member name="M:Reprogramming_Dll.ReprogrammerSiliconComponent.ReadECUInformation(System.String,System.Int64,System.Int64,System.Int64,System.Int64,Reprogramming_Dll.DLLConstants.CommInterface,System.String,System.Int64@)">
+ <summary>
+ Reads the ECU information.
+ </summary>
+ <param name="strvDeviceName"></param>
+ <param name="ECUAdd"></param>
+ <param name="TesterAdd"></param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ReprogrammerSiliconComponent.InitReflashing(System.String,System.String,System.Byte,System.Byte,System.String,System.String,System.String,System.String,Reprogramming_Dll.DLLConstants.CommInterface,System.Int64@)">
+ <summary>
+ Initialize the converter and other things required for reflashing.
+ </summary>
+ <param name="strvDeviceName">RS232 or USB</param>
+ <param name="strvFileOrDirName">File to be downloaded</param>
+ <param name="byvECUAdd">ECU Address</param>
+ <param name="byvTesterAdd">Tester Address</param>
+ <param name="strvNewBaud">Baud Rate (It should be one of the 9600, 19400, 38200, 57600, 115200)</param>
+ <param name="strvToolSign">Tool Signature</param>
+ <param name="strvProgDate">Reprogramming Date in YYMMDD format</param>
+ <param name="lrErrorCode">Error code that will be written</param>
+ <returns>True if it is successful</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Reprogramming_Dll.ReprogrammingFile.ULPFileName">
+ <summary>
+ The ULP file name
+ to be read.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Reprogramming_Dll.ReprogrammingFile.NumDownloadableSegments">
+ <summary>
+ Number of S2 lines in the ULP file.
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Reprogramming_Dll.ReprogrammingFile.ByteInPacket">
+ <summary>
+ Maximum number of bytes should contain in a packet.
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ReprogrammingFile.ReadULPFile(System.Int64@,System.String)">
+ <summary>
+ Reads the ULP file data completely
+ </summary>
+ <param name="lrErrorCode"></param>
+ <param name="strvULPFileName"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ReprogrammingFile.ReadCRCFile(System.Int64@,System.String)">
+ <summary>
+ Reads the CRC file data completely
+ </summary>
+ <param name="lrErrorCode"></param>
+ <param name="strvULPFileName"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ReprogrammingFile.GetSegmentData(System.Int32,System.Byte[]@,System.Int64@,System.Int64@)">
+ <summary>
+ Retuns the data bytes and address of specified line.
+ </summary>
+ <param name="nvSegment"></param>
+ <param name="byrLineData"></param>
+ <param name="lrLineAdd"></param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ReprogrammingFile.GetID0LineData(System.Byte[]@,System.Int64@)">
+ <summary>
+ Retrieves first S0 index-0 line data and saves into various properties.
+ </summary>
+ <param name="byrLineBytes">Line byte array read from ULP file</param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ReprogrammingFile.GetID2LineData(System.Byte[]@,System.Int64@)">
+ <summary>
+ Retrieves third S0 index-02 line data and saves into various properties.
+ </summary>
+ <param name="byrLineBytes">Line byte array read from ULP file</param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ReprogrammingFile.GetID1LineData(System.Byte[]@,System.Int64@)">
+ <summary>
+ Retrieves Second S0 index-01 line data and saves into various properties.
+ </summary>
+ <param name="byrLineBytes">Line byte array read from ULP file</param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ReprogrammingFile.CloseUlpFile(System.IO.StreamReader@)">
+ <summary>
+ Close the specified stream object.
+ </summary>
+ <param name="objReader"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ReprogrammingFile.ReadSLineWithVerification(System.IO.StreamReader@,System.String@,System.Byte[]@,System.Int64@)">
+ <summary>
+ Reads the S2 line data and verifies the checksum of read line
+ </summary>
+ <param name="objReader"></param>
+ <param name="byrS2Data"></param>
+ <param name="lrErrorCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ReprogrammingFile.ExtractLineBytes(System.IO.StreamReader@,System.String@,System.Byte[]@,System.Int64@)">
+ <summary>
+ Reads the line from the opened ULP file. Before calling this, function 
+ OpenUlpFile has to be called.
+ </summary>
+ <param name="strvLineType">Returns the Line type</param>
+ <returns>Returns bytes read from ULP file</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ReprogrammingFile.GetLineNumBytes(System.Byte[]@)">
+ <summary>
+ Returns the number of bytes in a line data bytes 
+ </summary>
+ <param name="byrLineBytes">Line byte array read from ULP file</param>
+ <returns>Number of bytes in the ULP line</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ReprogrammingFile.GetLineAddress(System.Int32)">
+ <summary>
+ Retrieves the address specified into the ULP Line data.
+ </summary>
+ <param name="nvSegment">Segment or line number</param>
+ <returns>Address specified</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ReprogrammingFile.GetLineDataBytes(System.Int32)">
+ <summary>
+ Retrieves the data bytes from line read from ULP file.
+ </summary>
+ <param name="nvSegment">The segment or line number</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ReprogrammingFile.VerifyLineChecksum(System.Byte[]@)">
+ <summary>
+ Verifies the line checksum.
+ </summary>
+ <param name="byrLineBytes">Line byte array read from ULP file</param>
+ <returns>True - If checksum mathces</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ReprogrammingFile.GetLineChecksum(System.Byte[]@)">
+ <summary>
+ Retrieves the checksum of the line read from ULP file.
+ </summary>
+ <param name="byrLineBytes">Line byte array read from ULP file</param>
+ <returns>Checksum byte</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ReprogrammingFile.CalculateLineChecksum(System.Byte[]@)">
+ <summary>
+ Calculate the checksum byte from the line data read from ULP file.
+ </summary>
+ <param name="byrLineBytes">Line byte array read from ULP file</param>
+ <returns>Checksum byte</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Reprogramming_Dll.ReprogrammingFileEx.MaxPacketSize">
+ <summary>
+ Gets and sets the maximum number of bytes in a packet
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Reprogramming_Dll.ReprogrammingFileEx.InitOK">
+ <summary>
+ Gets to check initialization is done OK and sets if initialization is done OK
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Reprogramming_Dll.ReprogrammingFileEx.SegmentRead">
+ <summary>
+ Gets and sets number of segment to read
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Reprogramming_Dll.ReprogrammingFileEx.GetDownloadDataNew(System.Int64@,System.Byte[]@,System.Boolean@,System.Int64@)">
+ <summary>
+ Gets the data from the reprogramming file data. It collects upto maximum buffer size or collects less if next line address
+ is not matching.
+ </summary>
+ <param name="lrZonalAdd">Zonal address of read data packets</param>
+ <param name="byrData">Actual data</param>
+ <param name="bylSegmentEnd">Sets if all data has been read</param>
+ <param name="lrErrorCode">Error status codes</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+</members>
+</doc>

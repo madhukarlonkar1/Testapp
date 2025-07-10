@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Licenses>
+	<License signature="R7KCl7cVvbBZH6zelmLN5fqSa1akAssRyObHREzab69zgHOKV1n+VLRJweyow0FY2AgMsIEb2OnMBaoQscGL34DfUSAZsXZYWLvDFGjJdmqeljM5rgtRf5jPtMUJghjtzfJmH+pa63qEp8kP5E7miKLVQMidJ0t9EdDSN7S9Rqs=" version="2.0" assemblyName="TsOpcNet11.v2">
+		<Expires>2103-08-20T00:00:00</Expires>
+		<SerialNumber>EVALUATION</SerialNumber>
+		<Limits>
+			<Limit type="Registration" requiredFields="firstname,lastname" serialNumberIsAllCaps="true" serialNumberMask="XXX-XXXXX-XXXXX-XXXXX-XXXXX" />
+			<Limit type="Trial" terms="" useGui="true" usePurchaseGui="false" duration="14" />
+			<Limit type="Version" maximum="2.99.0.0" minimum="2.0.0.0" />
+		</Limits>
+		<Values>
+			<Value key="__XL_PRO" value="TRUE" />
+		</Values>
+	</License>
+	<License signature="TRF5kQqbtR/eevQ/WHQPHoA/4UhMlEUo6+crVmxUwqXGwi8ZH6RZuznTu/A3ytBBcOEpPxaM6yIR3ZQ+4tkmP2onnByvfMf+/eeQSAd4sD+yMhZMQQ70BwfdaVSlbDef60TK47GlKdI+hPIK1+rUU2suALCyD3UGsqM0I9dpXaQ=" version="2.0" assemblyName="TsOpcNet11.v2">
+		<Expires>2105-11-20T00:00:00</Expires>
+		<SerialNumber>SPO-</SerialNumber>
+		<Limits>
+			<Limit type="Version" maximum="2.99.0.0" minimum="2.0.0.0" />
+		</Limits>
+		<Values>
+			<Value key="__XL_PRO" value="TRUE" />
+		</Values>
+		<UnlockBySerial>true</UnlockBySerial>
+	</License>
+	<License signature="SsfgFo/B8EUhrZbtTWPoTyYfAuQUtOSnyeq51Z877desNx6TC6Grxj4ZdIlNWGKkXbd/UM16V/O0Tuzuu2wk2x/zUAPThmorS1MFiVBebg3VUibTbAg1aClyxcFywcEe2bgONMgZgHz92ceakJWhzMIiG7r2Wo2rrCdt8akBsuY=" version="2.0" assemblyName="TsOpcNet11.v2">
+		<Expires>2105-11-20T00:00:00</Expires>
+		<SerialNumber>STD-</SerialNumber>
+		<Limits>
+			<Limit type="Version" maximum="2.99.0.0" minimum="2.0.0.0" />
+		</Limits>
+		<Values>
+			<Value key="__XL_PRO" value="TRUE" />
+		</Values>
+		<Meta>
+			<Values>
+				<Value key="XL_SERIALNUMBER" value="STD-4MK8E-9TBLZ-GJLAE-6D1J5" />
+				<Value key="XL_ORGANIZATION" value="Tata Motors Ltd Pune" />
+				<Value key="XL_USER" value="Tata Motors Ltd KBlock Pune" />
+			</Values>
+		</Meta>
+		<UnlockBySerial>true</UnlockBySerial>
+	</License>
+	<License signature="dqjhiEov6PI02raYQgaEMDMJ0LZQLuQJ83P8kiXHvPKw6C9hUjSKMkpo8BUNq8NcS+SiIJnMxPUDXdi2UjwcPlWD25X9gmery6GA8MbkcwOjgk41aAeY+2q9U4ykWpqAxlHvzU8gkHy6LsAG+WcuBL/SitJDInqURTPgdSNggl4=" version="2.0" assemblyName="TsOpcNet11.v2">
+		<Expires>2105-11-20T00:00:00</Expires>
+		<SerialNumber>PRO-</SerialNumber>
+		<Limits>
+			<Limit type="Version" maximum="2.99.0.0" minimum="2.0.0.0" />
+		</Limits>
+		<Values>
+			<Value key="__XL_PRO" value="TRUE" />
+		</Values>
+		<UnlockBySerial>true</UnlockBySerial>
+	</License>
+	<License signature="NTvArci7O/MDnDcd2tvPzbL5IuEOIzJ3KMEA0ycsPSSdTDLpvC9UAnlqCzNEI8FfSfEF/8yjlYP/5/3hCKX/LQ8k9sOPs3pBMkwmR9M26pi6hgdFpttOt2NkjHisnPtXsJMYRfgfkeSJlSL8smyD5LINTmPuJ59fmbgI/LUAhYU=" version="2.0" assemblyName="TsOpcNet11.v2">
+		<Expires>2105-11-20T00:00:00</Expires>
+		<SerialNumber>ENT-</SerialNumber>
+		<Limits>
+			<Limit type="Version" maximum="2.99.0.0" minimum="2.0.0.0" />
+		</Limits>
+		<Values>
+			<Value key="__XL_PRO" value="TRUE" />
+		</Values>
+		<UnlockBySerial>true</UnlockBySerial>
+	</License>
+</Licenses>

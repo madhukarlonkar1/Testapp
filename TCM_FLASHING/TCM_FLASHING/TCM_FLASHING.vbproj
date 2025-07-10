@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\ILRepack.2.0.44\build\ILRepack.props" Condition="Exists('..\packages\ILRepack.2.0.44\build\ILRepack.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1D5A0BA9-7A9F-4EEB-9583-BC70BE68722E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>TCM_FLASHING.My.MyApplication</StartupObject>
+    <RootNamespace>TCM_FLASHING</RootNamespace>
+    <AssemblyName>TCM_FLASHING</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>\\128.9.52.9\EOL Deployment Description\CVBU\UTK\OFFLINEBSVI\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>EOL_OFFLINE_FLASHING_BSVI</ProductName>
+    <PublisherName>TATA MOTORS LTD</PublisherName>
+    <SuiteName>EOL_OFFLINE_FLASHING_BSVI</SuiteName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>OFFLINE_BSVI.htm</WebPage>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>8.0.0.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>TCM_FLASHING.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>TCM_FLASHING.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>300B4855EFE81E2AC297C920899D0F043045E83B</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>OFFLINE_APPLICATION_NEW_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AT_AISIN_TMLDLLGENVB">
+      <HintPath>..\..\TCU GUI\bin\Release\AT_AISIN_TMLDLLGENVB.dll</HintPath>
+    </Reference>
+    <Reference Include="CommInterface, Version=1.0.75.1, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\CommInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="EncrpytDecrypt, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\EncrpytDecrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="J2534DotNet">
+      <HintPath>..\..\TCU Dll\bin\Release\J2534DotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Reprogramming_Dll, Version=1.23.9.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\TCU Dll\bin\Release\Reprogramming_Dll.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TsOpcNet11.v2">
+      <HintPath>.\TsOpcNet11.v2.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing, Version=0.16.10.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.10\lib\net48\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.10.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.10\lib\net48\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="CLASSES\ECU CLASSES\ECU\cls_TCM.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="CLASSES\COMMON CLASSES\ConfigrationXML.vb" />
+    <Compile Include="FORMS\frmMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmMaster.Designer.vb">
+      <DependentUpon>frmMaster.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FORMS\frmMaster.resx">
+      <DependentUpon>frmMaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="InvokeProf.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="My Project\app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Resources\Loading.gif" />
+    <None Include="Resources\EMS.jpg" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="TsOpcNet11.v2.DLL.licenses.B17F4F41">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.3.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 3.5 SP2</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="SAP.CrystalReports14.NET.2.0">
+      <Visible>False</Visible>
+      <ProductName>SAP Crystal Reports Runtime Engine for .NET Framework 4.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="DB\ACE_CNG_BSVI.sdf">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="DB\ACE_INTRA_BSVI.sdf">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="DB\DCM7p1_DiagnosticsDB.mdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="DB\FaceliftCube_DiagnosticsDB.mdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="stdole">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="System.Data.SqlServerCe">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="REPORT BARCODE PRINT\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\ILRepack.2.0.44\build\ILRepack.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\ILRepack.2.0.44\build\ILRepack.props'))" />
+  </Target>
+  <PropertyGroup>
+    <PostBuildEvent>IF "$(ConfigurationName)"=="Debug" (
+    SET ILREPACK_EXE="E:\p\EOL TOOL\Final Tool\TCM_FLASHING\packages\ILRepack.2.0.44\tools\ILRepack.exe"
+    SET OUTPUT_DIR="$(TargetDir)"
+    SET MAIN_EXE_NAME="$(TargetFileName)"
+    SET TEMP_EXE_NAME="$(TargetName).original$(TargetExt)"
+    SET LOG_FILE="%25OUTPUT_DIR%25ILRepack_Log.txt"
+
+    ECHO Starting ILRepack merge for DEBUG configuration... &gt; "%25LOG_FILE%25"
+
+    REM Change directory to the output folder. /D is crucial for cross-drive changes.
+    pushd "%25OUTPUT_DIR%25" &gt;&gt; "%25LOG_FILE%25" 2&gt;&amp;1
+    IF ERRORLEVEL 1 (
+        ECHO ERROR: Failed to change directory to %25OUTPUT_DIR%25. &gt;&gt; "%25LOG_FILE%25"
+        EXIT 1
+    )
+
+    REM Check if ILRepack.exe exists
+    IF NOT EXIST %25ILREPACK_EXE%25 (
+        ECHO ERROR: ILRepack.exe not found at %25ILREPACK_EXE%25 &gt;&gt; "%25LOG_FILE%25"
+        EXIT 1
+    )
+
+    REM Rename the original EXE to a temporary name
+    REM Use timeout to give Windows a moment to release file lock, if any.
+    timeout /t 1 /nobreak &gt;nul
+    move /Y "%25MAIN_EXE_NAME%25" "%25TEMP_EXE_NAME%25" &gt;&gt; "%25LOG_FILE%25" 2&gt;&amp;1
+    IF ERRORLEVEL 1 (
+        ECHO ERROR: Failed to move original EXE. File might be in use or missing. Check %25OUTPUT_DIR%25%25MAIN_EXE_NAME%25. &gt;&gt; "%25LOG_FILE%25"
+        popd
+        EXIT 1
+    )
+
+    REM Run ILRepack
+    REM Using 'call' ensures we capture the exit code of ILRepack.exe properly
+    call %25ILREPACK_EXE%25 /out:"%25MAIN_EXE_NAME%25" "%25TEMP_EXE_NAME%25" ^
+    "CommInterface.dll" ^
+    "J2534DotNet.dll" ^
+    "Reprogramming_Dll.dll" ^
+    /log:"%25LOG_FILE%25" /logpath:"%25OUTPUT_DIR%25"
+
+    IF ERRORLEVEL 1 (
+        ECHO ERROR: ILRepack exited with errors. Check %25LOG_FILE%25 for details. &gt;&gt; "%25LOG_FILE%25"
+        popd
+        EXIT 1
+    ) ELSE (
+        ECHO ILRepack merge completed successfully. &gt;&gt; "%25LOG_FILE%25"
+        REM Optionally, delete the original DLLs if the merge was successful
+        del "CommInterface.dll" &gt;&gt; "%25LOG_FILE%25" 2&gt;&amp;1
+        del "J2534DotNet.dll" &gt;&gt; "%25LOG_FILE%25" 2&gt;&amp;1
+        del "Reprogramming_Dll.dll" &gt;&gt; "%25LOG_FILE%25" 2&gt;&amp;1
+    )
+
+    REM Return to the original directory
+    popd &gt;&gt; "%25LOG_FILE%25" 2&gt;&amp;1
+)</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
